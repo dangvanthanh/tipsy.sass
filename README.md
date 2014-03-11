@@ -26,7 +26,7 @@ $radius : px, em, rem /* Border radius of tooltip */
 
 ##### HTML
 
-```hmtl
+```markup
 <span class="tipsy--nw" data-tipsy="Tipsy Northwest">Northwest</span>
 ```
 
