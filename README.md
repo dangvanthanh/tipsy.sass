@@ -24,6 +24,14 @@ $radius : px, em, rem /* Border radius of tooltip */
 
 #### How to use
 
+```markup
+<span class="tipsy--nw" data-tipsy="Tipsy Northwest">Northwest</span>
+```
+
+#### SCSS
+
+You can using @include of Sass
+
 ```scss
 .tipsy--nw { @include tipsy(nw, #34495e, 0);  }
 .tipsy--n  { @include tipsy(n, #2ecc71, 3px); }

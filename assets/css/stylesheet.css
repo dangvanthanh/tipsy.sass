@@ -1,4 +1,9 @@
 /**
+ * Tipsy.sass v1.0.0
+ * A mixin tooltip CSS using Sass
+ * Copyright 2014, Dang Van Thanh
+ */
+/**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
@@ -334,7 +339,7 @@ a {
   a:hover, a:focus {
     color: #3498db; }
 
-h1, h2 {
+h1, h2, h3 {
   line-height: 1.2; }
 
 .github-ribbon {
@@ -425,6 +430,11 @@ h1, h2 {
     @media screen and (max-width: 800px) {
       ._main h2 {
         font-size: 24px; } }
+  ._main h3 {
+    font-size: 24px; }
+    @media screen and (max-width: 800px) {
+      ._main h3 {
+        font-size: 18px; } }
 
 .example {
   overflow: hidden;
