@@ -1,5 +1,5 @@
 /**
- * Tipsy.sass v1.0.0
+ * Tipsy.sass v1.0.1
  * A mixin tooltip CSS using Sass
  * Copyright 2014, Dang Van Thanh
  */
@@ -50,7 +50,7 @@
     }
     &:before {
       border-bottom-color: $color;
-      left: 55%;
+      left: 60%;
       bottom: -35%;
     }
     &:after {
@@ -88,7 +88,7 @@
     }
     &:before {
       border-bottom-color: $color;
-      right: 55%;
+      right: 60%;
       bottom: -35%;
     }
     &:after {
@@ -127,7 +127,7 @@
     &:before {
       border-top-color: $color;
       top: -35%;
-      right: 55%;
+      right: 60%;
     }
     &:after {
       bottom: 135%;
@@ -165,7 +165,7 @@
     &:before {
       border-top-color: $color;
       top: -35%;
-      left: 55%;
+      left: 60%;
     }
     &:after {
       bottom: 135%;

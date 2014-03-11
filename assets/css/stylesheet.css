@@ -1,5 +1,5 @@
 /**
- * Tipsy.sass v1.0.0
+ * Tipsy.sass v1.0.1
  * A mixin tooltip CSS using Sass
  * Copyright 2014, Dang Van Thanh
  */
@@ -530,7 +530,7 @@ h1, h2, h3 {
     top: 115%; }
   .tipsy--nw:before {
     border-bottom-color: #1abc9c;
-    left: 55%;
+    left: 60%;
     bottom: -35%; }
   .tipsy--nw:after {
     left: 50%;
@@ -625,7 +625,7 @@ h1, h2, h3 {
     top: 115%; }
   .tipsy--ne:before {
     border-bottom-color: #3498db;
-    right: 55%;
+    right: 60%;
     bottom: -35%; }
   .tipsy--ne:after {
     right: 50%;
@@ -721,7 +721,7 @@ h1, h2, h3 {
   .tipsy--se:before {
     border-top-color: #34495e;
     top: -35%;
-    right: 55%; }
+    right: 60%; }
   .tipsy--se:after {
     bottom: 135%;
     right: 50%; }
@@ -816,7 +816,7 @@ h1, h2, h3 {
   .tipsy--sw:before {
     border-top-color: #d35400;
     top: -35%;
-    left: 55%; }
+    left: 60%; }
   .tipsy--sw:after {
     bottom: 135%;
     left: 50%; }
