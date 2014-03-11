@@ -24,11 +24,13 @@ $radius : px, em, rem /* Border radius of tooltip */
 
 #### How to use
 
-```markup
+##### HTML
+
+```hmtl
 <span class="tipsy--nw" data-tipsy="Tipsy Northwest">Northwest</span>
 ```
 
-#### SCSS
+##### SCSS
 
 You can using @include of Sass
 
