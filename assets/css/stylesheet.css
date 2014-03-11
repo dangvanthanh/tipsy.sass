@@ -431,7 +431,8 @@ h1, h2, h3 {
       ._main h2 {
         font-size: 24px; } }
   ._main h3 {
-    font-size: 24px; }
+    font-size: 24px;
+    text-transform: uppercase; }
     @media screen and (max-width: 800px) {
       ._main h3 {
         font-size: 18px; } }
