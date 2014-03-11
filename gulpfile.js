@@ -8,21 +8,21 @@ var gulp = require('gulp'),
 
 /* Styles */
 gulp.task('styles', function() {
-  gulp.src('./tipsy.scss')
+  gulp.src('./assets/scss/stylesheet.scss')
       .pipe(compass({
-        css: './',
-        sass: './',
+        css: './assets/css/',
+        sass: './assets/scss/',
         comments: false
       }))
       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-      .pipe(gulp.dest('./'))
+      .pipe(gulp.dest('./assets/css/'))
       .pipe(rename({suffix: '.min'}))
       .pipe(minifycss())
-      .pipe(gulp.dest('./'));
+      .pipe(gulp.dest('./assets/css/'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./tipsy.scss', function() {
+  gulp.watch('./assets/scss/stylesheet.scss', function() {
     gulp.run('styles');
   });
 });
