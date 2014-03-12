@@ -23,6 +23,7 @@ body {
   color: #222;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -75,7 +76,7 @@ h1, h2, h3 {
     margin: 0;
     font-size: 48px;
     text-transform: uppercase;
-    @include tipsy(n, #1abc9c, 10px);
+    @include tipsy(n, #53aee0, 10px);
     &:before, &:after {
       font-size: 21px;
     }
@@ -116,7 +117,7 @@ h1, h2, h3 {
 }
 
 .example--demo {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: #e5e5e5;
   display: block;
   width: 30%;
   float: left;
@@ -167,7 +168,7 @@ h1, h2, h3 {
 }
 
 ._footer {
-  background-color: #ededed;
+  background-color: #e5e5e5;
   padding: 5px 0;
   @extend .center;
 }
