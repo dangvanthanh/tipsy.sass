@@ -10,6 +10,13 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Londrina Solid';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Londrina Solid'), local('LondrinaSolid-Regular'), url(http://themes.googleusercontent.com/static/fonts/londrinasolid/v2/yysorIEiYSBb0ylZjg791Or7NmWjaFpdDH7zur_b4wE.woff) format('woff');
+}
+
 *,
 *:before,
 *:after {
@@ -18,12 +25,12 @@
 
 // Generic
 body {
-  background-color: #fefefe;
+  background-color: lighten(#60cdb5, 5%);
   margin: 0;
   color: #222;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -43,7 +50,7 @@ body {
 }
 
 a {
-  color: darken(#3498db, 10%);
+  color: darken(#3498db, 15%);
   text-decoration: none;
   &:hover, &:focus {
     color: #3498db;
@@ -74,14 +81,17 @@ h1, h2, h3 {
   padding: 15px 0;
   > h1 {
     margin: 0;
-    font-size: 48px;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 60px;
     text-transform: uppercase;
-    @include tipsy(n, #53aee0, 10px);
+    @include tipsy(n, #fff, 10px);
     &:before, &:after {
+      color: #444;
+      font-family: 'Lato', sans-serif;
       font-size: 21px;
     }
     @media screen and (max-width: 800px) {
-      font-size: 36px;
+      font-size: 48px;
       &:before, &:after {
         font-size: 12px;
       }
@@ -117,7 +127,7 @@ h1, h2, h3 {
 }
 
 .example--demo {
-  background-color: #e5e5e5;
+  background-color: #fff;
   display: block;
   width: 30%;
   float: left;
@@ -168,7 +178,7 @@ h1, h2, h3 {
 }
 
 ._footer {
-  background-color: #e5e5e5;
+  background-color: lighten(#fee2a0, 5%);
   padding: 5px 0;
   @extend .center;
 }
@@ -176,9 +186,9 @@ h1, h2, h3 {
 // Use Tipsy.sass
 .tipsy--nw { @include tipsy(nw, #1abc9c, 3px); }
 .tipsy--n  { @include tipsy(n, #2ecc71, 0); }
-.tipsy--ne { @include tipsy(ne, #3498db, 3px); }
+.tipsy--ne { @include tipsy(ne, #d35400, 3px); }
 .tipsy--e  { @include tipsy(e, #3498db, 0); }
 .tipsy--se { @include tipsy(se, #34495e, 3px); }
 .tipsy--s  { @include tipsy(s, #e74c3c, 0); }
-.tipsy--sw { @include tipsy(sw, #d35400, 3px); }
+.tipsy--sw { @include tipsy(sw, darken(#3498db, 20%), 3px); }
 .tipsy--w  { @include tipsy(w, #c0392b, 0); }
