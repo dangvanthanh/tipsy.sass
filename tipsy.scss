@@ -1,5 +1,5 @@
 /**
- * Tipsy.sass v1.0.1
+ * Tipsy.sass v1.0.2
  * A mixin tooltip CSS using Sass
  * Copyright 2014, Dang Van Thanh
  */
@@ -11,6 +11,8 @@
       visibility: visible;
       opacity: 1;
       transition: .2s .3s;
+      -webkit-transition: .2s .3s;
+      -moz-transition: .2s .3s;
     }
   }
   &:before, &:after {
@@ -21,6 +23,8 @@
     z-index: 1000000;
     pointer-events: none;
     transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
   }
   &:before {
     content: '';
@@ -69,6 +73,8 @@
     &:before, &:after {
       left: 50%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
     }
     &:before {
       border-bottom-color: $color;
@@ -107,6 +113,8 @@
     &:before, &:after {
       top: 50%;
       transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
     }
     &:before {
       border-left-color: $color;
@@ -145,6 +153,8 @@
     &:before, &:after {
       left: 50%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
     }
     &:before {
       border-top-color: $color;
@@ -183,6 +193,8 @@
     &:before, &:after {
       top: 50%;
       transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
     }
     &:before {
       border-right-color: $color;
