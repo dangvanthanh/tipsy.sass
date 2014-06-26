@@ -79,3 +79,7 @@ $radius : px, em, rem
 .tipsy--w
   +tipsy(w, #8e44ad, 3px)
 ```
+
+### Issues
+
+- Version 1.0.4: Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)

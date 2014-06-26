@@ -2,7 +2,7 @@
  * Tipsy.sass
  * @author: Dang Van Thanh
  * @description: A Simple Mixin Tooltip CSS Using Sass
- * @version: 1.0.3
+ * @version: 1.0.4
  */
 @mixin tipsy($gravity, $color, $radius) {
   position: relative;
@@ -19,15 +19,17 @@
   }
 
   &:before, &:after {
-    transform: translate3d(0, 0, 0);
     position: absolute;
     visibility: hidden;
     opacity: 0;
     z-index: 1000000;
     pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
     transition: .2s;
     -webkit-transition: .2s;
-    -moz-transition: .2s;
+    -ms-transition: .2s;
   }
 
   &:before {
@@ -51,30 +53,30 @@
   @if $gravity == 'nw' {
     &:hover, &:focus {
       &:before {
-        bottom: -15%;
+        top: -15%;
       }
       &:after {
-        top: 115%;
+        bottom: 115%;
       }
     }
 
     &:before {
-      border-bottom-color: $color;
-      left: 60%;
-      bottom: -35%;
+      border-top-color: $color;
+      top: -35%;
+      right: 60%;
     }
 
     &:after {
-      left: 50%;
-      top: 135%;
+      bottom: 135%;
+      right: 50%;
     }
   } @else if $gravity == 'n' {
     &:hover, &:focus {
       &:before {
-        bottom: -15%;
+        top: -15%;
       }
       &:after {
-        top: 115%;
+        bottom: 115%;
       }
     }
 
@@ -82,108 +84,18 @@
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
     }
 
     &:before {
-      border-bottom-color: $color;
-      bottom: -35%;
+      border-top-color: $color;
+      top: -35%;
     }
 
     &:after {
-      top: 135%;
+      bottom: 135%;
     }
   } @else if $gravity == 'ne' {
-    &:hover, &:focus {
-      &:before {
-        bottom: -15%;
-      }
-      &:after {
-        top: 115%;
-      }
-    }
-
-    &:before {
-      border-bottom-color: $color;
-      right: 60%;
-      bottom: -35%;
-    }
-
-    &:after {
-      right: 50%;
-      top: 135%;
-    }
-  } @else if $gravity == 'e' {
-    &:hover, &:focus {
-      &:before {
-        left: -15%;
-      }
-      &:after {
-        right: 115%;
-      }
-    }
-
-    &:before, &:after {
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-    }
-
-    &:before {
-      border-left-color: $color;
-      left: -35%;
-    }
-
-    &:after {
-      right: 125%;
-    }
-  } @else if $gravity == 'se' {
-    &:hover, &:focus {
-      &:before {
-        top: -15%;
-      }
-      &:after {
-        bottom: 115%;
-      }
-    }
-
-    &:before {
-      border-top-color: $color;
-      top: -35%;
-      right: 60%;
-    }
-
-    &:after {
-      bottom: 135%;
-      right: 50%;
-    }
-  } @else if $gravity == 's' {
-    &:hover, &:focus {
-      &:before {
-        top: -15%;
-      }
-      &:after {
-        bottom: 115%;
-      }
-    }
-
-    &:before, &:after {
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-    }
-
-    &:before {
-      border-top-color: $color;
-      top: -35%;
-    }
-
-    &:after {
-      bottom: 135%;
-    }
-  } @else if $gravity == 'sw' {
     &:hover, &:focus {
       &:before {
         top: -15%;
@@ -203,7 +115,7 @@
       bottom: 135%;
       left: 50%;
     }
-  } @else if $gravity == 'w' {
+  } @else if $gravity == 'e' {
     &:hover, &:focus {
       &:before {
         right: -15%;
@@ -224,8 +136,98 @@
       border-right-color: $color;
       right: -35%;
     }
+
     &:after {
       left: 135%;
+    }
+  } @else if $gravity == 'se' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+
+    &:before {
+      border-bottom-color: $color;
+      left: 60%;
+      bottom: -35%;
+    }
+
+    &:after {
+      left: 50%;
+      top: 135%;
+    }
+  } @else if $gravity == 's' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+    }
+
+    &:before {
+      border-bottom-color: $color;
+      bottom: -35%;
+    }
+
+    &:after {
+      top: 135%;
+    }
+  } @else if $gravity == 'sw' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+
+    &:before {
+      border-bottom-color: $color;
+      right: 60%;
+      bottom: -35%;
+    }
+
+    &:after {
+      right: 50%;
+      top: 135%;
+    }
+  } @else if $gravity == 'w' {
+    &:hover, &:focus {
+      &:before {
+        left: -15%;
+      }
+      &:after {
+        right: 115%;
+      }
+    }
+
+    &:before, &:after {
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+    }
+
+    &:before {
+      border-left-color: $color;
+      left: -35%;
+    }
+    &:after {
+      right: 125%;
     }
   }
 }
