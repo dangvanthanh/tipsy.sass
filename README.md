@@ -15,19 +15,19 @@ A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrom
 
 ### Tipsy.sass have 3 parameters allow you can customize
 
-** SCSS **
+**SCSS**
 
 ```scss
 @mixin tipsy($gravity, $color, $radius) {...}
 ```
 
-** SASS **
+**SASS**
 
 ```scss
 +tipsy($gravity, $color, $radius)
 ```
 
-** PARAMETERS **
+**PARAMETERS**
 
 ```
 // Position of tooltip
