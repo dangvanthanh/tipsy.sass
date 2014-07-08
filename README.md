@@ -13,18 +13,18 @@ A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrom
 @import "tipsy";
 ```
 
-### Tipsy.sass have 3 parameters allow you can customize
+### Tipsy.sass have 4 parameters allow you can customize
 
 **SCSS**
 
 ```scss
-@mixin tipsy($gravity, $color, $radius) {...}
+@mixin tipsy($gravity, $bgcolor, $bordersize, $radius) {...}
 ```
 
 **SASS**
 
 ```scss
-+tipsy($gravity, $color, $radius)
++tipsy($gravity, $bgcolor, $bordersize, $radius)
 ```
 
 **PARAMETERS**
@@ -34,6 +34,8 @@ A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrom
 $gravity: nw | n | ne | e | se | s | sw | w
 // Background color of tooltip
 $bgcolor  : HEX, RGB, RGBA, HSL
+// Arrow size of tooltip
+$bordersize : px, em, rem
 // Border radius of tooltip
 $radius : px, em, rem
 ```
@@ -43,43 +45,43 @@ $radius : px, em, rem
 #### HTML
 
 ```html
-<span class="tipsy--nw" data-tipsy="Tipsy Northwest">Northwest</span>
+<span class="tipsy" data-tipsy="Simple Tipsy">Simple Tipsy</span>
 ```
 
 #### SCSS
 
 ```scss
-.tipsy--nw { @include tipsy(nw, #34495e, 0);  }
-.tipsy--n  { @include tipsy(n, #2ecc71, 3px); }
-.tipsy--ne { @include tipsy(ne, #3498db, 0);  }
-.tipsy--e  { @include tipsy(e, #9b59b6, 3px); }
-.tipsy--se { @include tipsy(se, #f39c12, 0);  }
-.tipsy--s  { @include tipsy(s, #d35400, 3px); }
-.tipsy--sw { @include tipsy(sw, #c0392b, 0);  }
-.tipsy--w  { @include tipsy(w, #8e44ad, 3px); }
+.tipsy--nw { @include tipsy(nw, #34495e, 5px, 0);  }
+.tipsy--n  { @include tipsy(n, #2ecc71, 5px, 3px); }
+.tipsy--ne { @include tipsy(ne, #3498db, 5px, 0);  }
+.tipsy--e  { @include tipsy(e, #9b59b6, 5px, 3px); }
+.tipsy--se { @include tipsy(se, #f39c12, 5px, 0);  }
+.tipsy--s  { @include tipsy(s, #d35400, 5px, 3px); }
+.tipsy--sw { @include tipsy(sw, #c0392b, 5px, 0);  }
+.tipsy--w  { @include tipsy(w, #8e44ad, 5px, 3px); }
 ```
 
 #### SASS
 
 ```sass
 .tipsy--nw
-  +tipsy(nw, #34495e, 0)
+  +tipsy(nw, #34495e, 5px, 0)
 .tipsy--n
-  +tipsy(n, #2ecc71, 3px)
+  +tipsy(n, #2ecc71, 5px, 3px)
 .tipsy--ne
-  +tipsy(ne, #3498db, 0)
+  +tipsy(ne, #3498db, 5px, 0)
 .tipsy--e
-  +tipsy(e, #9b59b6, 3px)
+  +tipsy(e, #9b59b6, 5px, 3px)
 .tipsy--se
-  +tipsy(se, #f39c12, 0)
+  +tipsy(se, #f39c12, 5px, 0)
 .tipsy--s
-  +tipsy(s, #d35400, 3px)
+  +tipsy(s, #d35400, 5px, 3px)
 .tipsy--sw
-  +tipsy(sw, #c0392b, 0)
+  +tipsy(sw, #c0392b, 5px, 0)
 .tipsy--w
-  +tipsy(w, #8e44ad, 3px)
+  +tipsy(w, #8e44ad, 5px, 3px)
 ```
 
 ### Issues
-
+- Version 1.0.5: Change background variable and added arrow border size of tooltip
 - Version 1.0.4: Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)
