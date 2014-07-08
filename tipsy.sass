@@ -12,9 +12,6 @@
     &:before, &:after
       visibility: visible
       opacity: 1
-      transition: .2s .3s
-      transition: transform .2s, position .2s
-      -webkit-transition: -webkit-transform .2s, position .2s
 
   &:before, &:after
     position: absolute
@@ -24,12 +21,12 @@
     pointer-events: none
     transform: translate3d(0, 0, 0)
     -webkit-transform: translate3d(0, 0, 0)
-    transition: .2s
-    -webkit-transition: .2s
+    transition: .2s ease-in-out
+    -webkit-transition: .2s ease-in-out
 
   &:before
     content: ''
-    border: 5px solid transparent
+    border: $bordersize solid transparent
     bottom: 0
     z-index: 1000001
 
@@ -72,7 +69,6 @@
       left: 50%
       transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
-      -ms-transform: translateX(-50%)
 
     &:before
       border-top-color: $bgcolor
@@ -110,7 +106,6 @@
       top: 50%
       transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
-      -moz-transform: translateY(-50%)
 
     &:before
       border-right-color: $bgcolor
@@ -148,7 +143,6 @@
       left: 50%
       transform: translateX(-50%)
       -webkit-transform: translateX(-50%)
-      -ms-transform: translateX(-50%)
 
     &:before
       border-bottom-color: $bgcolor
@@ -186,7 +180,6 @@
       top: 50%
       transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
-      -ms-transform: translateY(-50%)
 
     &:before
       border-left-color: $bgcolor
