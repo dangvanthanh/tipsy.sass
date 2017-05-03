@@ -38,6 +38,8 @@ $bgcolor  : HEX, RGB, RGBA, HSL
 $bordersize : px, em, rem
 // Border radius of tooltip
 $radius : px, em, rem
+// Width of tooltip
+$width : px, em, rem
 ```
 
 ### How to use
@@ -58,7 +60,7 @@ $radius : px, em, rem
 .tipsy--se { @include tipsy(se, #f39c12, 5px, 0);  }
 .tipsy--s  { @include tipsy(s, #d35400, 5px, 3px); }
 .tipsy--sw { @include tipsy(sw, #c0392b, 5px, 0);  }
-.tipsy--w  { @include tipsy(w, #8e44ad, 5px, 3px); }
+.tipsy--w  { @include tipsy(w, #8e44ad, 5px, 3px, 10px); }
 ```
 
 #### SASS
@@ -79,9 +81,5 @@ $radius : px, em, rem
 .tipsy--sw
   +tipsy(sw, #c0392b, 5px, 0)
 .tipsy--w
-  +tipsy(w, #8e44ad, 5px, 3px)
+  +tipsy(w, #8e44ad, 5px, 3px, 10px)
 ```
-
-### Issues
-- Version 1.0.5: Change background variable and added arrow border size of tooltip
-- Version 1.0.4: Fix reversed tipsy. Thank you [@esteinborn](https://github.com/esteinborn)
