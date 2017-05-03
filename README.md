@@ -18,13 +18,13 @@ A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrom
 **SCSS**
 
 ```scss
-@mixin tipsy($gravity, $bgcolor, $bordersize, $radius) {...}
+@mixin tipsy($gravity, $bgcolor, $bordersize, $radius, $width) {...}
 ```
 
 **SASS**
 
 ```scss
-+tipsy($gravity, $bgcolor, $bordersize, $radius)
++tipsy($gravity, $bgcolor, $bordersize, $radius, $width)
 ```
 
 **PARAMETERS**
