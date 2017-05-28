@@ -1,5 +1,6 @@
 # Tipsy.sass
-A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrome, Firefox, Safari and Opera
+
+> A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrome, Firefox, Safari and Opera
 
 ## Installation
 * Clone ``git@github.com:dangvanthanh/tipsy.sass.git``
