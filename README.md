@@ -3,6 +3,14 @@
 > A mixin tooltip CSS using Sass. It currently support Internet Explorer 9+, Chrome, Firefox, Safari and Opera
 
 ## Installation
+
+### NPM
+
+```shell
+$ npm install tipsy-sass
+```
+
+### Normal
 * Clone ``git@github.com:dangvanthanh/tipsy.sass.git``
 * [Download the latest version](https://github.com/dangvanthanh/tipsy.sass/archive/master.zip)
 
@@ -14,7 +22,7 @@
 @import "tipsy";
 ```
 
-### Tipsy.sass have 4 parameters allow you can customize
+### Tipsy.sass have 5 parameters allow you can customize
 
 **SCSS**
 
@@ -30,18 +38,13 @@
 
 **PARAMETERS**
 
-```
-// Position of tooltip
-$gravity: nw | n | ne | e | se | s | sw | w
-// Background color of tooltip
-$bgcolor  : HEX, RGB, RGBA, HSL
-// Arrow size of tooltip
-$bordersize : px, em, rem
-// Border radius of tooltip
-$radius : px, em, rem
-// Width of tooltip
-$width : px, em, rem
-```
+| Param         | Description                 | Value                             |
+|---------------|-----------------------------|-----------------------------------|
+| `$gravity`    | Position of tooltip         | nw | n | ne | e | se | s | sw | w |
+| `$bgcolor`    | Background color of tooltip | HEX, RGB, RGBA, HSL               |
+| `$bordersize` | Arrow size of tooltip       | px, em, rem                       |
+| `$radius`     | Border radius of tooltip    | px, em, rem                       |
+| `$width`      | Width of tooltip            | px, em, rem                       |
 
 ### How to use
 
@@ -62,25 +65,4 @@ $width : px, em, rem
 .tipsy--s  { @include tipsy(s, #d35400, 5px, 3px); }
 .tipsy--sw { @include tipsy(sw, #c0392b, 5px, 0);  }
 .tipsy--w  { @include tipsy(w, #8e44ad, 5px, 3px, 10px); }
-```
-
-#### SASS
-
-```sass
-.tipsy--nw
-  +tipsy(nw, #34495e, 5px, 0)
-.tipsy--n
-  +tipsy(n, #2ecc71, 5px, 3px)
-.tipsy--ne
-  +tipsy(ne, #3498db, 5px, 0)
-.tipsy--e
-  +tipsy(e, #9b59b6, 5px, 3px)
-.tipsy--se
-  +tipsy(se, #f39c12, 5px, 0)
-.tipsy--s
-  +tipsy(s, #d35400, 5px, 3px)
-.tipsy--sw
-  +tipsy(sw, #c0392b, 5px, 0)
-.tipsy--w
-  +tipsy(w, #8e44ad, 5px, 3px, 10px)
 ```
